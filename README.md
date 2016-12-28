@@ -1,2 +1,2 @@
 # ContactMgr
-Contact Manager application 2
+Contact Manager application 
