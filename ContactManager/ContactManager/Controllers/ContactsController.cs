@@ -1,6 +1,5 @@
 ﻿using ContactManager.Models;
 using ContactManager.ViewModels;
-using System;
 using System.Linq;
 using System.Web.Mvc;
 
@@ -39,7 +38,7 @@ namespace ContactManager.Controllers
             {
                 FirstName = viewModel.FirstName,
                 LastName = viewModel.LastName,
-                DateOfBirth = DateTime.Parse(string.Format("{0}", viewModel.DateOfBirth)),
+                DateOfBirth = viewModel.DateOfBirth,
                 GenderId = viewModel.GenderId
             };
 
