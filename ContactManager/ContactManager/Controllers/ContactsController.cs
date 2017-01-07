@@ -34,11 +34,17 @@ namespace ContactManager.Controllers
         {
             //var gender = _context.Genders.Single(g => g.Id == viewModel.GenderId);
 
+            if (!ModelState.IsValid)
+            {
+                viewModel.Genders = _context.Genders.ToList();
+                return View("Create", viewModel);
+            }
+
             var contact = new Person
             {
                 FirstName = viewModel.FirstName,
                 LastName = viewModel.LastName,
-                DateOfBirth = viewModel.DateOfBirth,
+                DateOfBirth = viewModel.GetDateOfBirth(),
                 GenderId = viewModel.GenderId
             };
 

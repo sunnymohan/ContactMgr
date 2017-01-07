@@ -1,29 +1,33 @@
 ﻿@model ContactManager.ViewModels.PersonFormViewModel
-    @{
-        ViewBag.Title = "Create";
-        Layout = "~/views/shared/_layout.cshtml";
-    }
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/views/shared/_layout.cshtml";
+}
 
-    <h2>Create a Contact</h2>
+<h2>Create a Contact</h2>
 
-    @using (Html.BeginForm("Create", "Contacts"))
-    {
-        <div class="form-group">
-            @Html.LabelFor(m => m.FirstName)
-            @Html.TextBoxFor(m => m.FirstName, new { @class = "form-control" })
-        </div>
-        <div class="form-group">
-            @Html.LabelFor(m => m.LastName)
-            @Html.TextBoxFor(m => m.LastName, new { @class = "form-control" })
-        </div>
+@using (Html.BeginForm("Create", "Contacts"))
+{
+    <div class="form-group">
+        @Html.LabelFor(m => m.FirstName)
+        @Html.TextBoxFor(m => m.FirstName, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.FirstName)
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.LastName)
+        @Html.TextBoxFor(m => m.LastName, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.LastName)
+    </div>
         <div class="form-group">
             @Html.LabelFor(m => m.DateOfBirth)
             @Html.TextBoxFor(m => m.DateOfBirth, new { @class = "form-control" })
+            @Html.ValidationMessageFor(m => m.DateOfBirth)
         </div>
         <div class="form-group">
             @Html.LabelFor(m => m.GenderId)
             @Html.DropDownListFor(m => m.GenderId, new SelectList(Model.Genders, "Id", "GenderType"), "", new { @class = "form-control" })
+            @Html.ValidationMessageFor(m => m.GenderId)
         </div>
 
         <button type="submit" class="btn btn-primary">Save</button>
-    }
+}
