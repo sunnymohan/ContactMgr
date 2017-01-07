@@ -186,6 +186,10 @@
     <Compile Include="Migrations\201701071206572_Gender.Designer.cs">
       <DependentUpon>201701071206572_Gender.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201701071805008_MadeChangesToGender.cs" />
+    <Compile Include="Migrations\201701071805008_MadeChangesToGender.Designer.cs">
+      <DependentUpon>201701071805008_MadeChangesToGender.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\ApplicationDbContext.cs" />
@@ -274,6 +278,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201701071206572_Gender.resx">
       <DependentUpon>201701071206572_Gender.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201701071805008_MadeChangesToGender.resx">
+      <DependentUpon>201701071805008_MadeChangesToGender.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

@@ -10,7 +10,7 @@ namespace ContactManager.ViewModels
         public string LastName { get; set; }
         public string DateOfBirth { get; set; }
 
-        public string Gender { get; set; }
+        public byte GenderId { get; set; }
 
         public IEnumerable<Gender> Genders { get; set; }
 
