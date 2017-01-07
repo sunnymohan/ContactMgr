@@ -1,0 +1,28 @@
+﻿@model ContactManager.ViewModels.PersonFormViewModel
+    @{
+        ViewBag.Title = "Create";
+        Layout = "~/views/shared/_layout.cshtml";
+    }
+
+    <h2>Create</h2>
+
+    <form>
+        <div class="form-group">
+            @Html.LabelFor(m => m.FirstName)
+            @Html.TextBoxFor(m=> m.FirstName, new { @class = "form-control"})
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(m => m.LastName)
+            @Html.TextBoxFor(m => m.LastName, new { @class = "form-control"})
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(m => m.DateOfBirth)
+            @Html.TextBoxFor(m => m.DateOfBirth, new { @class = "form-control"})
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(m => m.Gender)
+            @Html.DropDownListFor(m => m.Gender, new SelectList(Model.Genders, "Id", "GenderType"), "", new { @class = "form-control"})
+        </div>
+        
+        <button type="submit" class="btn btn-primary">Save</button>
+    </form>
