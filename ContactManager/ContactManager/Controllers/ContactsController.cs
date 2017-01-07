@@ -8,7 +8,7 @@ namespace ContactManager.Controllers
     public class ContactsController : Controller
     {
 
-        private ApplicationDbContext _context;
+        private readonly ApplicationDbContext _context;
 
 
         public ContactsController()
