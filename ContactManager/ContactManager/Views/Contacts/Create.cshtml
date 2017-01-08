@@ -18,11 +18,11 @@
         @Html.TextBoxFor(m => m.LastName, new { @class = "form-control" })
         @Html.ValidationMessageFor(m => m.LastName)
     </div>
-        <div class="form-group">
-            @Html.LabelFor(m => m.DateOfBirth)
-            @Html.TextBoxFor(m => m.DateOfBirth, new { @class = "form-control" })
-            @Html.ValidationMessageFor(m => m.DateOfBirth)
-        </div>
+    <div class="form-group">
+        @Html.LabelFor(m => m.DateOfBirth)
+        @Html.TextBoxFor(m => m.DateOfBirth, new { @class = "form-control" })
+        @Html.ValidationMessageFor(m => m.DateOfBirth)
+    </div>
         <div class="form-group">
             @Html.LabelFor(m => m.GenderId)
             @Html.DropDownListFor(m => m.GenderId, new SelectList(Model.Genders, "Id", "GenderType"), "", new { @class = "form-control" })
@@ -30,4 +30,8 @@
         </div>
 
         <button type="submit" class="btn btn-primary">Save</button>
+}
+@section scripts
+{
+    @Scripts.Render("~/bundles/jqueryval")
 }
